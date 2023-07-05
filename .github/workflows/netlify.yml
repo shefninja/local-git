@@ -1,0 +1,19 @@
+name: "Netlify Production Pipeline"
+
+on:
+ push:
+   branches:
+     - main
+jobs:
+  static_test:
+    runs-on: ubuntu-latest
+   
+    steps:
+     -  name: "show all files"
+        run: ls
+      
+     -  name: "my message"
+        run: echo "please process the psyment for me"
+    
+     -  name: "run test case"
+        run: exit 1
