@@ -9,11 +9,16 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-     -  name: "show all files"
-        run: ls
+     -  name: "run test cases"
+        run: echo "running test"
       
-     -  name: "my message"
-        run: echo "please process the psyment for me"
+     -  name: "pull code"
+        uses: actions/checkout@v2
     
-     -  name: "run test case"
-        run: exit 1
+     -  name: Deployment system
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN}}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
+        with:
+           args: deploy --dir=. --prod
