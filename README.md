@@ -17,6 +17,5 @@ THis is a documentation of the NJC Training details, and below are the deliverab
 _See the design below_
 
       
-
-      [**READ MORE ON THE PROJECT HERE**](https://github.com/shefninja/local-git/blob/main/project.md)
+[**READ MORE ON THE PROJECT HERE**](https://github.com/shefninja/local-git/blob/main/project.md)
       
